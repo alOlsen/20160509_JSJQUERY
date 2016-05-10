@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> LIGHT SWITCH </title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script>
+
+	$(document).ready( function(){
+		var isLightOn = true;
+
+		$("#lightSwitch").click( function(){
+			console.log( "CLICK HAPPENED" );
+
+			if( isLightOn ){
+				$("body").css("background", "black");
+				$("h1").html("<img src='images/off.jpg'/>");
+				isLightOn = false;
+			}else{
+				$("body").css("background", "yellow");
+				$("h1").html("<img src='images/on.jpg'/>");
+				isLightOn = true;
+			}
+		});
+
+	});
+
+	</script>
+	<style>
+	body{
+		background :yellow;
+	}
+	#lightSwitch{
+		width : 50px;
+		height : 100px;
+		background : white;
+		border : solid 1px black;
+	}
+	h1{
+		color : white;
+		background : black;
+	}
+
+	h1 img{
+		width : 50%;
+	}
+	</style>
+</head>
+<body>
+	
+	<div id="lightSwitch"></div>
+	<h1>HI!</h1>
+</body>
+</html>
